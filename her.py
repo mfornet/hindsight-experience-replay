@@ -144,5 +144,5 @@ def loop(n):
 
 
 if __name__ == '__main__':
-    for i in range(11, 51):
+    for i in range(2, 24):
         loop(i)

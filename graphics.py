@@ -4,7 +4,7 @@ import numpy as np
 from her import evaluate_actor
 from model import QModel
 
-TRAINED_MODELS = 14
+TRAINED_MODELS = 23
 
 def success_curve():
     X = np.arange(2, TRAINED_MODELS)
