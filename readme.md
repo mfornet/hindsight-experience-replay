@@ -6,7 +6,7 @@ The intention is trying to reproduce the [original paper](https://arxiv.org/abs/
 
 Different models were trained for each bit count. The success rate is the percent of episodes where the algorithms makes it from the start state to the goal. 
 
-![HER results on the Bit Flipping Environment](https://github.com/mfornet/hindsight-experience-replay/raw/master/src/common/images/her.png "Bit-flipping results with and without her.")
+![HER results on the Bit Flipping Environment](https://github.com/mfornet/hindsight-experience-replay/blob/master/images/her.png "Bit-flipping results with and without her.")
 
 The policy is unable to succeed for larger values of `N` because it doesn't have any sample with reward different from `-1`. This problem is fixed with HER improvement.
 
