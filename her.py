@@ -88,8 +88,8 @@ def loop(n):
     logger_her.info("Start main loop with size {}".format(n))
     logger_her.info("HER STATUS: {}".format(HER))
 
-    actor = QModel(n)
-    critic = QModel(n)
+    actor = QModel(n, HER)
+    critic = QModel(n, HER)
 
     if not TRAIN_FROM_SCRATCH:
         actor.load()

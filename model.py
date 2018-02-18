@@ -12,10 +12,11 @@ from utils import *
 
 
 class QModel:
-    def __init__(self, n):
+    def __init__(self, n, her):
         self.n = n
+        self.her = her
 
-        self.checkpoint = ModelCheckpoint(model_path(self.n))
+        self.checkpoint = ModelCheckpoint(model_path(self.n, self.her))
         self.build()
 
     def build(self):
@@ -82,10 +83,10 @@ class QModel:
         self.model_a.set_weights(critic.model_a.get_weights())
 
     def load(self):
-        path = model_path(self.n)
+        path = model_path(self.n, self.her)
         if exists(path):
             try:
-                self.model_a.load_weights(model_path(self.n))
+                self.model_a.load_weights(path)
                 logger_her.info("Model loaded...")
             except OSError:
                 pass
