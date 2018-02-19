@@ -24,12 +24,15 @@ def success_curve():
         success_rate = evaluate_actor(model)
         y_nher[idx] = success_rate
 
-    plt.plot(X, y_her)
-    plt.plot(X, y_nher)
+    plt.plot(X, y_her, 'b', label='HER')
+    plt.plot(X, y_nher, 'r--', label='No HER')
 
     plt.ylim(-1e-1, 1+1e-1)
 
-    # plt.legend(["HER", "No HER"])
+    plt.xlabel("Number of bits")
+    plt.ylabel("Success rate")
+
+    plt.legend(loc='lower left')
 
     plt.show()
 
