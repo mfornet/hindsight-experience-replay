@@ -10,7 +10,7 @@ SEED = 2018             # Seed to reproduce experiments. Use `None` to run diffe
 # ===============================
 #   Hindsight Experience Replay
 # ===============================
-HER = False             # Switch on to activate HER
+HER = True             # Switch on to activate HER
 HER_NEW_GOALS = 5       # Number of new goals for experience
 
 # ============
@@ -51,5 +51,5 @@ TRAIN_VERBOSE = 0
 # ===============
 #   Checkpoints
 # ===============
-TRAIN_FROM_SCRATCH = False
+TRAIN_FROM_SCRATCH = True
 MODEL_PATH = 'models'
